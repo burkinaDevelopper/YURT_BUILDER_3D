@@ -1,0 +1,281 @@
+.header-box {
+    background: url('./20-_16_bbq-edited.jpg') center/cover;
+    height: 60vh;
+    padding: 8px 40px;
+}
+
+.nav-bar1 .contact-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.contact-head p,
+.contact-head a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background: rgba(218, 222, 226, 0.623);
+    padding: 3px 0;
+    border-radius: 5px;
+}
+
+
+.hover-li a,
+.hover-li {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+}
+
+.hover-li {
+    position: relative;
+    transition: 0.15s;
+}
+
+.active-header {
+    color: rgb(13, 110, 253) !important;
+}
+
+
+.hidden-li {
+    display: none;
+    position: absolute;
+    transition: 0.15s;
+    background: whitesmoke;
+    padding: 8px;
+}
+
+.hidden-li a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.15s;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.hidden-li li {
+    list-style: none;
+    width: 100%;
+}
+
+.hidden-li li a:hover {
+    color: rgb(13, 110, 253);
+}
+
+.hover-li:hover .hidden-li {
+    display: block;
+}
+
+.nav-bar2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-content-side {
+    position: absolute;
+    padding-right: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+    background: #09fbba;
+    top: 0;
+    right: -70%;
+    transition: 0.5s ease-out;
+    z-index: 4;
+    padding-right: 0px;
+    overflow-y: scroll;
+}
+
+#close {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    color: white;
+    font-size: 2.1rem;
+    cursor: pointer;
+}
+
+#home {
+    margin-top: 40px;
+}
+
+.hover-li-side {
+    margin: 40px 0;
+    font-size: 3rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+.home {
+    color: black;
+    font-size: 3rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+.nav-content-side>li:hover {
+    color: rgb(13, 110, 253);
+}
+
+.hidden-li-side {
+    margin: 10px 0;
+}
+
+.hidden-li-side li {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.hidden-li-side a:hover {
+    color: rgb(32, 30, 30);
+}
+
+@media screen and (max-width: 1100px) {
+    .nav-content {
+        display: none;
+    }
+
+    .toggle-btn {
+        cursor: pointer;
+        float: right;
+    }
+
+    .toggle-btn span {
+        width: 50px;
+        height: 8px;
+        border-radius: 5px;
+        background: #09fbba;
+        display: block;
+        margin-top: 4px;
+        transition: 0.3s ease;
+    }
+
+    .activesidebar {
+        right: 0px;
+    }
+
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .contact-head p,
+    .contact-head a {
+        font-size: 0.9rem;
+        font-weight: 500;
+
+    }
+}
+
+
+.galery-listing {
+    padding: 160px 20px 30px;
+    background: rgb(16, 33, 49);
+}
+
+.gallery {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery img {
+    width: 30%;
+    padding: 3px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajouts pour l'animation */
+.lightbox-content {
+    -webkit-transition: -webkit-transform 0.35s ease-in-out;
+    transition: transform 0.35s ease-in-out;
+}
+
+.lightbox-content.is-prev {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.lightbox-content.is-next {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+/* Animation pour l'affichage et la disparition du lightbox */
+.lightbox {
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    opacity: 0;
+}
+
+.lightbox.is-visible {
+    opacity: 1;
+    display: block;
+    /* Mettre à jour pour être visible avant de commencer l'animation */
+}

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3Dbuild</title>
+    <link href="{{asset('./assets/css/gdpr-cookie.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./assets/fonts/cloudicon/cloudicon.css')}}" rel="stylesheet"
+        onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/fonts/fontawesome/css/all.css')}}" rel="stylesheet"
+        onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/fonts/evafeat/evafeat.css')}}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <!-- RTL STYLES-->
+    <link href="{{asset('./assets/css/rtl/bootstrap-rtl.min.css')}}" disabled="true" rel="stylesheet" class="rtl">
+    <link href="./assets/css/rtl/style-rtl.min.css" disabled="true" rel="stylesheet" class="rtl">
+    <!-- CSS styles -->
+    <link href="{{asset('./assets/css/bootstrap.min.css')}}" rel="stylesheet" class="ltr"
+        onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/css/flickity.min.css')}}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/css/aos.min.css')}}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/css/swiper.min.css')}}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/css/animate.min.css')}}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{{asset('./assets/css/style.min.css')}}" rel="stylesheet">
+    <link href="{{asset('./assets/css/custom.css')}}" rel="stylesheet">
+    @vite(['resources/css/app.css','resources/js/app.js'])
+</head>
+<!-- ***** NEWS ***** -->
+
+<body>
+
+    <div class="sec-bg3 infonews">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-md-6 news">
+                    {{-- <span class="badge bg-purple me-2">news</span>
+                    <span>SSD Storage with increased flexibility.</span>
+                    <span> <a class="c-yellow" href="vps">Cloud Overview <i
+                                class="fas fa-arrow-circle-right"></i></a></span> --}}
+                </div>
+                <div class="col-6 col-md-6 link">
+                    <div class="infonews-nav float-end">
+                        <a href="{{config('contact.social.facebook')}}" class="iconews"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="{{config('contact.social.twitter')}}" class="iconews"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="{{config('contact.social.youtube')}}" class="iconews"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="{{config('contact.social.instagram')}}" class="iconews"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="tel:{{config('contact.tel.phone')}}"
+                            class="iconews tabphone">{{config('contact.tel.phone')}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** NAV MENU DESKTOP ****** -->
+    <div class="menu-wrap">
+        <div class="nav-menu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-2 col-md-2">
+                        <a href="{{route('home')}}">
+                            <img class="svg logo-menu d-block" src="{{asset('assets/img/location-logo.webp')}}"
+                                alt="logo Antler">
+                        </a>
+                    </div>
+                    <nav id="menu" class="col-10 col-md-10">
+                        <div class="navigation float-end">
+                            <button class="menu-toggle">
+                                <span class="icon"></span>
+                                <span class="icon"></span>
+                                <span class="icon"></span>
+                            </button>
+                            <ul class="main-menu nav navbar-nav navbar-right">
+                                <li class="menu-item menu-item-has-children">
+                                    <a class="v-stroke" href="{{route('home')}}">HOME</a>
+                                </li>
+
+
+                                <li class="menu-item menu-item-has-children me-3">
+                                    <a class="m-0 pe-1 v-stroke" href="#">LEARN</a>
+                                    <div class="sub-menu menu-large bg-colorstyle">
+                                        <div class="service-list">
+                                            <div class="service">
+
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="{{route('pacificYurt')}}">Why
+                                                        Pacific Yurts? </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item menu-item-has-children me-3">
+                                    <a class="m-0 pe-1 v-stroke " href="#">GALLERY</a>
+                                    <div class="sub-menu menu-large bg-colorstyle">
+                                        <div class="service-list">
+                                            <div class="service">
+
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="{{route('galerryphoto')}}">
+                                                        Photo Gallery</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('galleryvideo')}}">Video Gallery</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="{{route('virtualtour')}}">360°
+                                                        Virtual Tours</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="menu-item menu-item-has-children me-3">
+
+                                    <a class="m-0 pe-1 v-stroke" href="#">PRICING</a>
+                                    <div class="sub-menu menu-large bg-colorstyle">
+                                        <div class="service-list">
+                                            <div class="service">
+
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('customfeatures')}}">Standard/Custom Features </a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="{{route('build3d')}}">Yurt
+                                                        Builder 3D™ </a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('replacementparts')}}">Replacement Parts</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('shippingInfo')}}">Shipping Info</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                {{-- <li class="menu-item menu-item-has-children me-3">
+                                    <a class="m-0 pe-1 v-stroke " href="#">RESOURCES</a>
+                                    <div class="sub-menu menu-large bg-colorstyle">
+                                        <div class="service-list">
+                                            <div class="service">
+
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="hosting"> Customer Support
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="reseller"> Downloads </a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="reseller">Yurt Care &
+                                                        Maintenance</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="reseller">Yurt Vacations</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="reseller">Blog</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li> --}}
+                                <li class="menu-item menu-item-has-children me-3">
+                                    <a class="m-0 pe-1 v-stroke" href="#">ABOUT US</a>
+                                    <div class="sub-menu menu-large bg-colorstyle">
+                                        <div class="service-list">
+                                            {{-- <div class="service">
+
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="hosting">Our Company </a>
+                                                </div>
+                                            </div> --}}
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('environmental')}}">Environmental Initiatives</a>
+                                                </div>
+                                            </div>
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor"
+                                                        href="{{route('testimonials')}}">Reviews and Testimonials</a>
+                                                </div>
+                                            </div>
+                                            {{-- <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="reseller">Company Timeline</a>
+                                                </div>
+                                            </div> --}}
+                                            <div class="service">
+                                                <div class="media-body">
+                                                    <a class="menu-item mergecolor" href="{{asset('contact')}}">Contact
+                                                        Us</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+                                <div class="tech-box">
+
+                                    <img class="svg" src="./assets/img/menu.svg" alt="" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                                </div>
+                            </ul>
+                        </div>
+                    </nav>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** NAV MENU MOBILE ****** -->
+    <div class="menu-wrap mobile">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <a href="index"><img class="svg logo-menu d-block" src="./assets/img/logo.svg"
+                            alt="logo Antler"></a>
+                    <a href="index"><img class="svg logo-menu d-none" src="./assets/img/logo-light.svg"
+                            alt="logo Antler"></a>
+                </div>
+                <div class="col-6">
+                    <nav class="nav-menu float-end d-flex">
+                        <div class="tech-box">
+                            <img class="svg" src="./assets/img/menu.svg" alt="" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                        </div>
+                        <button id="nav-toggle" class="menu-toggle">
+                            <span class="icon"></span>
+                            <span class="icon"></span>
+                            <span class="icon"></span>
+                        </button>
+                        <div class="main-menu bg-seccolorstyle">
+                            <div class="menu-item">
+                                <a class="mergecolor" href="#" data-bs-toggle="dropdown">Home <div
+                                        class="badge bg-purple">NEW</div></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item menu-item" href="index">Home Default</a>
+                                    <a class="dropdown-item menu-item" href="homevideo">Home Video</a>
+                                    <a class="dropdown-item menu-item" href="homeimage">Home Image</a>
+                                    <a class="dropdown-item menu-item" href="homegaming">Home Gaming <div
+                                            class="badge inside bg-purple ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="home3d">Home 3D <div
+                                            class="badge inside bg-purple ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item"
+                                        href="http://inebur.com/whmcs/?systpl=antler-rtl&language=arabic"
+                                        target="_blank">WHMCS (RTL)
+                                        <div class="badge inside bg-pink ms-2">HOT</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="mergecolor" href="#" data-bs-toggle="dropdown">Hosting <div
+                                        class="badge bg-purple">PRO</div></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item menu-item" href="hosting">Shared Hosting</a>
+                                    <a class="dropdown-item menu-item" href="reseller">Cloud Reseller</a>
+                                    <a class="dropdown-item menu-item" href="dedicated">Dedicated Server</a>
+                                    <a class="dropdown-item menu-item" href="vps">Cloud VPS</a>
+                                    <a class="dropdown-item menu-item" href="wordpress">WordPress Hosting</a>
+                                    <a class="dropdown-item menu-item" href="domains">Domain Names</a>
+                                    <a class="dropdown-item menu-item" href="developer">Developer Hosting</a>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="mergecolor" href="#" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item menu-item" href="emailsecurity">Email Security</a>
+                                    <a class="dropdown-item menu-item" href="ssl">SSL Certificates</a>
+                                    <a class="dropdown-item menu-item" href="email">Enterprise Email</a>
+                                    <a class="dropdown-item menu-item" href="magento">Magento Pro</a>
+                                    <a class="dropdown-item menu-item" href="gsuite"> Suite - Google</a>
+                                    <a class="dropdown-item menu-item" href="iptv">IPTV System</a>
+                                    <a class="dropdown-item menu-item" href="gaming">Gaming Server</a>
+                                    <a class="dropdown-item menu-item" href="radiostream">Radio Stream</a>
+                                    <a class="dropdown-item menu-item" href="ddos">DDoS Protection</a>
+                                    <a class="dropdown-item menu-item" href="datacenter">Datacenter <div
+                                            class="badge inside bg-grey ms-2">TOP</div></a>
+                                    <a class="dropdown-item menu-item" href="about">About Us</a>
+                                    <a class="dropdown-item menu-item" href="database">Database-as-a-Service</a>
+                                    <a class="dropdown-item menu-item" href="vpn">VPN Solutions <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="voip">Virtual Numbers</a>
+                                    <a class="dropdown-item menu-item" href="voice">Voice Server <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="seo">Managed SEO Services <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="payments">Payment Methods <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="configurator">Configurator <div
+                                            class="badge inside bg-grey ms-2">HOT</div></a>
+                                    <a class="dropdown-item menu-item" href="cart">Cart</a>
+                                    <a class="dropdown-item menu-item" href="checkout">Checkout</a>
+                                    <a class="dropdown-item menu-item" href="soon">Coming Soon</a>
+                                    <a class="dropdown-item menu-item" href="promos">Promotions</a>
+                                    <a class="dropdown-item menu-item" href="blackfriday">Blackfriday <div
+                                            class="badge inside bg-pink ms-2">HOT</div></a>
+                                    <a class="dropdown-item menu-item" href="cryptotrading">Crypto Trading <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="cryptoexchange">Crypto Exchange <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="colocation">Colocation <div
+                                            class="badge inside bg-pink ms-2">NEW</div></a>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="mergecolor" href="#" data-bs-toggle="dropdown">Features</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item menu-item" href="http://inebur.com/whmcs/?systpl=antler"
+                                        target="_blank">WHMCS Template <div class="badge inside bg-pink">HOT</div></a>
+                                    <a class="dropdown-item menu-item"
+                                        href="http://inebur.com/whmcs/cart.php?carttpl=antler&systpl=antler"
+                                        target="_blank">Order Form Template <div class="badge inside bg-grey">TOP</div>
+                                    </a>
+                                    <a class="dropdown-item menu-item" href="http://inebur.com/antler/email/"
+                                        target="_blank">HMCS Email Template <div class="badge inside bg-grey">TOP</div>
+                                    </a>
+                                    <a class="dropdown-item menu-item" href="http://inebur.com/antler/newsletter/"
+                                        target="_blank">WHMCS Newsletter Template <div class="badge inside bg-grey">TOP
+                                        </div></a>
+                                    <a class="dropdown-item menu-item" href="pricing">Pricing Options</a>
+                                    <a class="dropdown-item menu-item" href="sliders">Content Sliders</a>
+                                    <a class="dropdown-item menu-item" href="configurator">Configurator <div
+                                            class="badge inside bg-pink">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="404">404 Error</a>
+                                    <a class="dropdown-item menu-item" href="maintenannce">Maintenance <div
+                                            class="badge inside bg-pink">NEW</div></a>
+                                    <a class="dropdown-item menu-item" href="login">Register</a>
+                                    <a class="dropdown-item menu-item" href="login">Client Area</a>
+                                    <a class="dropdown-item menu-item" href="elements">Elements</a>
+                                    <a class="dropdown-item menu-item" href="sections">Sections</a>
+                                </div>
+                            </div>
+                            <div class="menu-item menu-last">
+                                <a class="mergecolor" href="#" data-bs-toggle="dropdown">Support</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item menu-item" href="knowledgebase-list">Knowlege List</a>
+                                    <a class="dropdown-item menu-item" href="knowledgebase-article">Knowlege Article</a>
+                                    <a class="dropdown-item menu-item" href="contact">Contact Us</a>
+                                    <a class="dropdown-item menu-item" href="legal">Legal</a>
+                                    <a class="dropdown-item menu-item" href="blog-details">Blog</a>
+                                    <a class="dropdown-item menu-item" href="faq">Faq</a>
+                                </div>
+                            </div>
+                            <div class="float-start w-100 mt-3">
+                                <p class="c-grey-light seccolor"> <small> Phone: + (123) 1300-656-1046</small> </p>
+                                <p class="c-grey-light seccolor"><small>Email: antler@mail.com</small> </p>
+                            </div>
+                            <div>
+                                <a href="login">
+                                    <div class="btn btn-default-yellow-fill mt-3">CLIENT AREA</div>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Sidebar ****** -->
+    <div class="offcanvas offcanvas-start offcanvas-box bg-colorstyle" tabindex="-1" id="offcanvasWithBackdrop"
+        aria-labelledby="offcanvasWithBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title mergecolor" id="offcanvasWithBackdropLabel">Special Deals</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row mb-4">
+                <h6 class="mergecolor">Free Trials</h6>
+                <div class="col">
+                    <a href="hosting">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-purple">free migration</div>
+                            <img src="./assets/img/topbanner05.jpg" class="card-img-top" alt="Shared Hosting">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark mergecolor">Shared Hosting</h6>
+                                <p class="card-text text-dark seccolor"><small>Blazing fast & stable hosting
+                                        infrastructure</small></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="emailsecurity">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-purple">free test</div>
+                            <img src="./assets/img/topbanner03.jpg" class="card-img-top" alt="Email Security">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark mergecolor">Email Security</h6>
+                                <p class="card-text text-dark seccolor"><small>Powerful protection for emails with
+                                        intelligent cluster</small></p>
+                            </div>
+                        </div>
+                </div>
+                </a>
+            </div>
+            <div class="row mb-4">
+                <h6 class="mergecolor">Special Promotions</h6>
+                <div class="col-md-6">
+                    <a href="hosting">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-grey">50%</div>
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="svg img-fluid rounded-start" src="./assets/fonts/svg/cloudfiber.svg"
+                                        alt="Shared Hosting">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-dark mergecolor">Hosting</h6>
+                                        <p class="card-text text-dark seccolor"><small>Storage SSD, CloudLinux,
+                                                cPanel..</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="domains">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-grey">$0.77</div>
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="svg img-fluid rounded-start" src="./assets/fonts/svg/domains.svg"
+                                        alt="Email Security">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-dark mergecolor">Domains</h6>
+                                        <p class="card-text text-dark seccolor"><small>More than 900 domains
+                                                extensions..</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="gsuite">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-purple">55%</div>
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="svg img-fluid rounded-start" src="./assets/fonts/svg/docbox.svg"
+                                        alt="G Suite Google">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-dark mergecolor">G Suite</h6>
+                                        <p class="card-text text-dark seccolor"><small>Email, Chat, Apps, Cloud
+                                                Storage..</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="ssl">
+                        <div class="card mb-4 border-0 upping cursor-p noshadow bg-seccolorstyle">
+                            <div class="plans badge feat bg-purple">35%</div>
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img class="svg img-fluid rounded-start" src="./assets/fonts/svg/privacy.svg"
+                                        alt="Wilcard SSL">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-dark mergecolor">Wilcard</h6>
+                                        <p class="card-text text-dark seccolor"><small>Security, credibility and trust
+                                                visitors..</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <h6 class="mergecolor">Flexible Operating Systems</h6>
+                <p class="seccolor"><small>Install over +300 scripts and apps instantly with our auto installer.</small>
+                </p>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/centos.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Centos</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/debian.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Debian</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/docker.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Docker</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/drupal.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Drupal</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/cpanel.svg" alt="Centos">
+                        <p class="mb-0 seccolor">cPanel</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/fedora.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Fedora</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/gitlab.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Gitlab</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/joomla.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Joomla</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/joomla.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Lamp</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/magento.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Magento</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/openvpn.svg" alt="Centos">
+                        <p class="mb-0 seccolor">VPN</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/owncloud.svg" alt="Centos">
+                        <p class="mb-0 seccolor">OWN</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/prestashop.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Presta</p>
+                    </a>
+                </div>
+                <div class="os border-0 upping cursor-p noshadow bg-seccolorstyle">
+                    <a href="#">
+                        <img class="svg" src="./assets/apps/windows.svg" alt="Centos">
+                        <p class="mb-0 seccolor">Windows</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** TRANSLATION ****** -->
+    @yield('content')
+    {{-- footer --}}
+
+    <footer class="footer">
+        <img class="logo-bg logo-footer" src="./assets/img/symbol.svg" alt="logo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="heading">Yurt</div>
+                        <ul class="footer-menu">
+                            <img class="svg logo-menu d-block" src="{{asset('assets/img/location-logo.webp')}}"
+                                alt="logo Antler">
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="heading">CONTACT US</div>
+                        <ul class="footer-menu">
+                            <li class="menu-item"><a href="login">PRICING / FEATURES</a></li>
+                            <li class="menu-item"><a href="knowledgebase-list">PHOTO GALLERY</a></li>
+                            <li class="menu-item"><a href="contact">BLOG</a></li>
+                            <li class="menu-item"><a href="faq">CUSTOMER SUPPORT</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="heading">WHY PACIFIC YURTS?</div>
+                        <ul class="footer-menu">
+                            <li class="menu-item"><a href="about">ABOUT OUR COMPANY</a> </li>
+                            <li class="menu-item"><a href="elements">YURT VACATIONS</a></li>
+                            <li class="menu-item"><a href="blog-details">YURT BUILDER 3D™</a></li>
+                            <li class="menu-item"><a href="legal">DOWNLOADS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        {{-- <a><img class="svg logo-footer d-block" src="./assets/img/logo.svg" alt="logo"></a> --}}
+                        {{-- <a><img class="svg logo-footer d-none" src="{{asset('assets/img/yuts-foot.png')}}"
+                                alt="logo"></a> --}}
+                        <div class="copyright">© Copyright 2024 | Pacific Yurts. All Rights Reserved. Privacy Policy |
+                            Terms & Conditions</div>
+                        <div class="soc-icons">
+                            <a href="{{config('contact.social.facebook')}}"><i
+                                    class="fab fa-facebook-f withborder noshadow"></i></a>
+                            <a href="{{config('contact.social.youtube')}}"><i
+                                    class="fab fa-youtube withborder noshadow"></i></a>
+                            <a href="{{config('contact.social.twitter')}}"><i
+                                    class="fab fa-twitter withborder noshadow"></i></a>
+                            <a href="{{config('contact.social.instagram')}}"><i
+                                    class="fab fa-instagram withborder noshadow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subcribe news">
+            <div class="container">
+                <div class="row">
+                    @if(session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                    @endif
+                    <form action="{{route('newspaper')}}" class="w-100" method="POST">
+                        @csrf
+                        <div class="col-md-6 offset-md-3">
+                            <div class="general-input">
+                                <input class="fill-input" type="email" name="email" placeholder="Email">
+                                <input type="submit" value="SUBSCRIBE"
+                                    class="btn btn-default-yellow-fill initial-transform">
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-md-3 text-center pt-4">
+                            <p>Subscribe to our newsletter to receive news and updates</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="footer-menu">
+                            <li id="drop-lng" class="btn-lang-footer btn-group btn-group-toggle">
+
+                                <label data-lng="es-ES" for="option4" class="btn btn-secondary me-1 styletextDirection"
+                                    data-value="ltr">
+                                    <input type="radio" name="options" id="option4"> Address:
+                                </label>
+                            </li>
+                            <li class="menu-item by">Pacific Yurts
+                                77456 Hwy 99 Cottage Grove, Oregon 97424 USA
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="payment-list">
+                            <li>
+                                <p>contact</p>
+                            </li>
+                            <li>{{config('contact.tel.phone')}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Javascript -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/typed.js')}}"></script>
+    <script defer src="{{asset('assets/js/popper.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/jquery.countdown.js')}}"></script>
+    <script defer src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/slick.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/flickity.pkgd.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/flickity-fade.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/aos.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/isotope.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/jquery.scrollme.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/swiper.min.js')}}"></script>
+    <script async src="{{asset('assets/js/lazysizes.min.js')}}"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script defer src="{{asset('assets/js/scripts.min.js')}}"></script>
+    <script defer src="{{asset('assets/js/settings-init.js')}}"></script>
+    <script>
+        var typed3 = new Typed('#typed3', {
+            strings: ["for personal use", "for professional use", "for government use"],
+            typeSpeed: 50,
+            backSpeed: 20,
+            smartBackspace: true,
+            loop: true
+        });
+    </script>
+    <script>
+        $("#nav-toggle").click(function () {
+            $(".menu-wrap.mobile, .menu-toggle").toggleClass("active");
+        });
+    </script>
+    <script>
+        var typed1 = new Typed('#typed1', {
+            strings: ["performance", "flexibility", "scalability."],
+            typeSpeed: 50,
+            backSpeed: 20,
+            smartBackspace: true,
+            loop: true
+        });
+        var typed1 = new Typed('#typed2', {
+            strings: ["Protection", "Sophisticated", "Flexibility"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            smartBackspace: true,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
+
+
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+
+        <!-- Name -->
+        <div>
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
+                autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- Email Address -->
+        <div class="mt-4">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
+
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+            <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                name="password_confirmation" required autocomplete="new-password" />
+
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ms-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>
+
+
+<x-guest-layout>
+    <!-- Session Status -->
+    <x-auth-session-status class="mb-4" :status="session('status')" />
+
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
+
+        <!-- Email Address -->
+        <div>
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
+
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                autocomplete="current-password" />
+
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
+
+        <!-- Remember Me -->
+        <div class="block mt-4">
+            <label for="remember_me" class="inline-flex items-center">
+                <input id="remember_me" type="checkbox"
+                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+            </label>
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            @if (Route::has('password.request'))
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                href="{{ route('password.request') }}">
+                {{ __('Forgot your password?') }}
+            </a>
+            @endif
+
+            <x-primary-button class="ms-3">
+                {{ __('Log in') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>
